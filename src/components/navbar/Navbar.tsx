@@ -40,7 +40,7 @@ const Navbar: FC = () => {
         </div>
 
         <div className="flex flex-col w-full ">
-          <Link to="/Logout">
+          <Link to="/">
           <div className="flex flex-col text-[16px] text-[#212529] py-[4px] px-[16px] text-center">
             Logout
           </div>

@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Booking from "./components/booking/Booking";
+import ChatBot from "./components/chatbot/Chatbot";
+import Footer from "./components/footer/Footer";
+import LoginPage from "./components/loginpage/Login";
+import MettingPage from "./components/meetingpage/MeetingPage";
+import Navbar from "./components/navbar/Navbar";
+import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" w-full h-full ">
+        <Routes>
+        <Route path='/' element={ <LoginPage/>}/>
+        <Route path='Logout' element={ <LoginPage/>}/>
+
+        <Route path='Login' element={ <div> <Navbar/>
+        <Booking/></div>}/>
+        <Route path='MyBooking' element={ <div> <Navbar/>
+        <MettingPage/></div>}/>
+
+   
+        </Routes>
+        <ChatBot/>
+      <Footer/> 
+   
     </div>
   );
 }
